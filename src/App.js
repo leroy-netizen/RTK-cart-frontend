@@ -1,5 +1,5 @@
 import "./App.css";
-import {Routes, Route, Redirect} from 'react-router-dom'
+import { Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/not-found" element={<Four_oh_Four />} />
-        {/* <Redirect to="/not-found" /> */}
+        <Route path="*" element={ <Navigate to="not-found" replace /> } />
       </Routes>
     </div>
   );
