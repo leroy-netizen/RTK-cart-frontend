@@ -1,5 +1,5 @@
 import "./App.css";
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Redirect} from 'react-router-dom'
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
@@ -14,6 +14,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+} 
 
 export default App;
