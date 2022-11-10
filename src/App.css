@@ -80,3 +80,20 @@
   color: black;
   margin-left: 5px;
 }
+/* not found (four oh four) */
+
+.not-found{
+  display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: rgb(68, 68, 68);
+   min-height: 80vh;
+}
+.not-found h1{
+  font-size: 200px;
+
+}
+.not-found p{
+  font-size: 50px;
+}
