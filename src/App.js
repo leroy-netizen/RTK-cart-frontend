@@ -3,7 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Cart from "./components/Cart";
 import Home from "./components/Home";
-import Four_oh_Four from "./components/Four_oh_Four";
+import FourOhFour from "./components/FourOFour";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/not-found" element={<Four_oh_Four />} />
-        <Route path="*" element={ <Navigate to="not-found" replace /> } />
+        <Route path="/not-found" element={<FourOhFour />} />
+        <Route path="*" element={<Navigate to="not-found" replace />} />
       </Routes>
     </div>
   );
