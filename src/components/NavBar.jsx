@@ -21,7 +21,7 @@ const NavBar = () => {
           </svg>
           <span className="bag-quantity">
             <span>4</span>
-          </span>
+          </span> 
         </div>
       </Link>
     </nav>

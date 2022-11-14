@@ -8,7 +8,7 @@ const Home = () =>
       {isLoading ? <p>Loading...</p> :error ? <p>An error occured </p> : (<>
       <h2>New Arrivals</h2>
       <div className="products">
-        {data?.map((product ) => <div key={product.id} classsName="product ">
+        {data?.map((product ) => <div key={product.id} className="product">
           <h3>{product.name}</h3>
           <img src={product.image} alt={product.name}/>
           <div className="details">
