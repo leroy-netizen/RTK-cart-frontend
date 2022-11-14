@@ -16,16 +16,17 @@ const cartSlice = createSlice({
       );
       if (itemIndex >= 0) {
           state.cartItems[ itemIndex ].cartQuantity += 1;
-          toast.info( "increased product quantity", {
+          toast.info( `increased ${action.payload.name} quantity in cart`, {
               position: "bottom-left"
           })
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 };
           state.cartItems.push( tempProduct );
-            toast.success("Added product to cart", {
+            toast.success(`Added ${action.payload.name} to cart`, {
               position: "bottom-left",
             });
       }
+          localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
     },
   },
 });
