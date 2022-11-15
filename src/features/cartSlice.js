@@ -61,6 +61,16 @@ const cartSlice = createSlice({
 
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
+    // increaseQuantityInCart ( state, action )
+    // {
+    //   const itemIndex = state.cartItems.findIndex( ( cartItem ) => cartItem.id === action.payload.id )
+      
+    //   if (state.cartItems[itemIndex].cartQuantity >= 1)
+    //   {
+        
+    //   }
+
+    // }
   },
 });
 
