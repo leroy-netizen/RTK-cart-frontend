@@ -58,21 +58,19 @@ const cartSlice = createSlice({
           position: "bottom-left",
         });
       }
-
+      
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
-    // increaseQuantityInCart ( state, action )
-    // {
-    //   const itemIndex = state.cartItems.findIndex( ( cartItem ) => cartItem.id === action.payload.id )
-      
-    //   if (state.cartItems[itemIndex].cartQuantity >= 1)
-    //   {
-        
-    //   }
-
-    // }
+    emptyCart (state, action)
+    {
+      state.cartItems = []
+      toast.error("cart has been emptied", {
+        position: "bottom-left",
+      });
+      localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+    }
   },
 });
 
-export const { addToCart, removeFromCart, decreaseQuantityInCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, decreaseQuantityInCart, emptyCart } = cartSlice.actions;
 export default cartSlice.reducer;
